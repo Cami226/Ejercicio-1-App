@@ -6,8 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
+import com.bootcamp.ejercicio1app.navigation.NavController
 import dagger.hilt.android.AndroidEntryPoint
 import com.bootcamp.ejercicio1app.ui.theme.Ejercicio1AppTheme
+
 import com.bootcamp.ejercicio1app.viewmodel.ContactViewModel
 
 
@@ -22,8 +24,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             Ejercicio1AppTheme {
-
-
+                NavController(contactViewModel)
                 }
             }
         }
